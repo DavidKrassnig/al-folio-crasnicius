@@ -1,25 +1,37 @@
-# al-folio
+# multi-language-al-folio
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [maintainers]: https://img.shields.io/badge/maintainers-4-success.svg 'Number of maintainers'
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![deploy](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/alshedivat/al-folio/actions/workflows/deploy.yml)
-[![demo](https://img.shields.io/badge/theme-demo-brightgreen.svg)](https://alshedivat.github.io/al-folio/)
-[![GitHub contributors](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://github.com/alshedivat/al-folio/graphs/contributors/)
+[![deploy](https://github.com/george-gca/multi-language-al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/george-gca/multi-language-al-folio/actions/workflows/deploy.yml)
+[![demo](https://img.shields.io/badge/theme-demo-brightgreen.svg)](https://george-gca.github.io/multi-language-al-folio/)
+[![GitHub contributors](https://img.shields.io/github/contributors/george-gca/multi-language-al-folio.svg)](https://github.com/george-gca/multi-language-al-folio/graphs/contributors/)
 [![Maintainers][maintainers]](#maintainers)
 [![GitHub release](https://img.shields.io/github/v/release/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/alshedivat/al-folio?color=blue)](https://github.com/alshedivat/al-folio/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/alshedivat/al-folio)](https://github.com/alshedivat/al-folio)
-[![GitHub forks](https://img.shields.io/github/forks/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/fork)
+[![GitHub license](https://img.shields.io/github/license/george-gca/multi-language-al-folio?color=blue)](https://github.com/george-gca/multi-language-al-folio/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/george-gca/multi-language-al-folio)](https://github.com/george-gca/multi-language-al-folio)
+[![GitHub forks](https://img.shields.io/github/forks/george-gca/multi-language-al-folio)](https://github.com/george-gca/multi-language-al-folio/fork)
 
 [![Docker Image Version](https://img.shields.io/docker/v/amirpourmand/al-folio?sort=semver&label=docker%20image&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
 [![Docker Image Size](https://img.shields.io/docker/image-size/amirpourmand/al-folio?sort=date&label=docker%20image%20size&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
 [![Docker Pulls](https://img.shields.io/docker/pulls/amirpourmand/al-folio?color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
 
-A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.
+A multilingual version of the [al-folio theme](https://github.com/alshedivat/al-folio), a simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.
 If you like the theme, give it a star!
 
-[![Preview](https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
+The default language will be the first in the list of languages in the `_config.yml` file. When using two languages, the theme will show a button in the header that switches to the other language directly.
+
+![Switch language](https://raw.githubusercontent.com/george-gca/multi-language-al-folio/master/assets/img/multi-language-diff-1.png)
+![Switch back language](https://raw.githubusercontent.com/george-gca/multi-language-al-folio/master/assets/img/multi-language-diff-2.png)
+
+When using three or more, it will be created a dropdown menu with all the available languages.
+
+![Switch language between 3 or more](https://raw.githubusercontent.com/george-gca/multi-language-al-folio/master/assets/img/multi-language-3-or-more.png)
+
+---
+
+[![Preview](https://raw.githubusercontent.com/george-gca/multi-language-al-folio/master/assets/img/al-folio-preview.png)](https://george-gca.github.io/multi-language-al-folio/)
+
 
 ## User community
 
@@ -148,9 +160,11 @@ Medical Robotics Junior Faculty Forum (ISMR: <a href="https://junior-forum-ismr.
 </tr>
 </table>
 
+
 ## Lighthouse PageSpeed Insights
 
-[![Google PageSpeed](https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/pagespeed.svg)](https://pagespeed.web.dev/report?url=https%3A%2F%2Falshedivat.github.io%2Fal-folio%2F&form_factor=desktop)
+[![Google PageSpeeg](https://raw.githubusercontent.com/george-gca/multi-language-al-folio/master/assets/img/pagespeed.svg)](https://pagespeed.web.dev/report?url=https%3A%2F%2Fgeorge-gca.github.io%2Fmulti-language-al-folio%2F&form_factor=desktop)
+
 
 ## Table Of Contents
 
@@ -184,6 +198,7 @@ Medical Robotics Junior Faculty Forum (ISMR: <a href="https://junior-forum-ismr.
 
 Want to learn more about Jekyll? Check out [this tutorial](https://www.taniarascia.com/make-a-static-website-with-jekyll/).
 Why Jekyll? Read [Andrej Karpathy's blog post](https://karpathy.github.io/2014/07/01/switching-to-jekyll/)!
+
 
 ### Installation
 
@@ -372,7 +387,7 @@ Another option is to manually update your code by following the steps below:
 
 ```bash
 # Assuming the current directory is <your-repo-name>
-$ git remote add upstream https://github.com/alshedivat/al-folio.git
+$ git remote add upstream https://github.com/george-gca/multi-language-al-folio.git
 $ git fetch upstream
 $ git rebase v0.9.0
 ```
@@ -419,7 +434,7 @@ If you have a different question, please ask using [Discussions](https://github.
    If you are deploying a project page, set `baseurl: /<your-project-name>/`.
    If all previous steps were done correctly, all is missing is
    [for your browser to fetch again the site stylesheet](https://github.com/alshedivat/al-folio/issues/1398#issuecomment-1609518404).
-   
+
 5. **Q:** Atom feed doesn't work. Why?
    <br>
    **A:** Make sure to correctly specify the `url` and `baseurl` paths in `_config.yml`.
@@ -531,17 +546,17 @@ To do this, edit the collections in the `_config.yml` file, create a correspondi
 
 The theme allows you to create blog posts in the [distill.pub](https://distill.pub/) style:
 
-<p align="center"><a href="https://alshedivat.github.io/al-folio/blog/2021/distill/" target="_blank"><img src="https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/distill-screenshot.png" width=700></a></p>
+<p align="center"><a href="https://george-gca.github.io/multi-language-al-folio/blog/2021/distill/" target="_blank"><img src="https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/distill-screenshot.png" width=700></a></p>
 
-For more details on how to create distill-styled posts using `<d-*>` tags, please refer to [the example](https://alshedivat.github.io/al-folio/blog/2021/distill/).
+For more details on how to create distill-styled posts using `<d-*>` tags, please refer to [the example](https://george-gca.github.io/multi-language-al-folio/blog/2021/distill/).
 
 #### Full support for math & code
 
 **al-folio** supports fast math typesetting through [MathJax](https://www.mathjax.org/) and code syntax highlighting using [GitHub style](https://github.com/jwarby/jekyll-pygments-themes):
 
 <p align="center">
-<a href="https://alshedivat.github.io/al-folio/blog/2015/math/" target="_blank"><img src="https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/math-screenshot.png" width=400></a>
-<a href="https://alshedivat.github.io/al-folio/blog/2015/code/" target="_blank"><img src="https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/code-screenshot.png" width=400></a>
+<a href="https://george-gca.github.io/multi-language-al-folio/blog/2015/math/" target="_blank"><img src="https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/math-screenshot.png" width=400></a>
+<a href="https://george-gca.github.io/multi-language-al-folio/blog/2015/code/" target="_blank"><img src="https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/code-screenshot.png" width=400></a>
 </p>
 
 #### Photos
@@ -550,7 +565,7 @@ Photo formatting is made simple using [Bootstrap's grid system](https://getboots
 Easily create beautiful grids within your blog posts and project pages:
 
 <p align="center">
-  <a href="https://alshedivat.github.io/al-folio/projects/1_project/">
+  <a href="https://george-gca.github.io/multi-language-al-folio/projects/1_project/">
     <img src="https://raw.githubusercontent.com/alshedivat/al-folio/master/assets/img/photos-screenshot.png" width="75%">
   </a>
 </p>
@@ -668,7 +683,7 @@ If you are interested, please reach out!
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://github.com/alshedivat/al-folio/blob/master/LICENSE).
+The theme is available as open source under the terms of the [MIT License](https://github.com/george-gca/multi-language-al-folio/blob/master/LICENSE).
 
 Originally, **al-folio** was based on the [\*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](https://liabogoev.com) and under the MIT license).
 Since then, it got a full re-write of the styles and many additional cool features.
