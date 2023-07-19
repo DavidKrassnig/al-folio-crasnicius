@@ -2,6 +2,9 @@ not_found:
   message: Vi estos redirektita al la ĉefa paĝo ene de 3 sekundoj. Se ne redirektiĝas, bonvolu reveni al la
   main_page: hejmpaĝo
 main:
+  first_name: Vi
+  middle_name: A.
+  last_name: Nomo
   address: >
     <p>555 via oficeja numero</p>
     <p>123 via adreso-strato</p>

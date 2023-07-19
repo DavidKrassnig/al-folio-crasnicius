@@ -2,6 +2,9 @@ not_found:
   message: Sie werden innerhalb von 3 Sekunden zur Hauptseite weitergeleitet. Falls nicht, gehen Sie bitte zurück zur
   main_page: Startseite
 main:
+  first_name: Dei
+  middle_name: N.
+  last_name: Name
   address: >
     <p>555 Ihre Büronummer</p>
     <p>123 Ihre Adressstraße</p>
