@@ -233,7 +233,7 @@ defaults:
 # multi language settings
 default_locale_in_subfolder: false
 exclude_from_localizations: ["js", "css"]
-languages: ["en", "pt-br", "de"]
+languages: ["en", "pt-br", "de", "eo"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
@@ -418,6 +418,8 @@ jekyll_get_json:
     json: "assets/json/resume_pt-br.json"
   - data: resume_de
     json: "assets/json/resume_de.json"
+  - data: resume_eo
+    json: "assets/json/resume_eo.json"
 jsonresume:
   - basics
   - work
