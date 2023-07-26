@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://davidkrassnig.github.io/al-folio-crasnicius/sitemap.xml
+Sitemap: https://george-gca.github.io/multi-language-al-folio/sitemap.xml
