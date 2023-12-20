@@ -15,6 +15,10 @@ main:
     Funkciigita per <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> kun la temo <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
     Gastigita de <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
     Fotoj de <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  more_info: >
+    <p>555 via oficejo</p>
+    <p>123 via strato</p>
+    <p>12345 via urbo</p>
   subtitle: <a href='#'>Filioj</a>. Adreso. Kontaktoj. Moto. Ktp.
 titles:
   about: pri
@@ -22,6 +26,7 @@ titles:
   cv: vivprotokolo
   latest_posts: lastaj afiŝoj
   news: novaĵoj
+  profiles: homoj
   projects: projektoj
   publications: eldonaĵoj
   repositories: deponejoj
