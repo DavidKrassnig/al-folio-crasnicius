@@ -3,17 +3,14 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
 email: you@example.com
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the main language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.ico  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://george-gca.github.io # the base hostname & protocol for your site
-baseurl: /multi-language-al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
+url: https://davidkrassnig.github.io # the base hostname & protocol for your site
+baseurl: /al-folio-crasnicius # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -45,7 +42,8 @@ navbar_fixed: true
 footer_fixed: true
 
 # Dimensions
-max_width: 900px
+# max_width: 850px # Standard Dimensions
+max_width: 1024px # Extended Dimensions needed for German
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -232,7 +230,7 @@ sass:
 # multi language settings
 default_locale_in_subfolder: false
 exclude_from_localizations: ["assets"]
-languages: ["en", "pt-br"]
+languages: ["en", "de", "eo"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
@@ -388,9 +386,11 @@ medium_zoom:
 
 jekyll_get_json:
   - data: resume_en
-    json: "assets/json/resume_en.json" # it can also be an url
-  - data: resume_pt-br
-    json: "assets/json/resume_pt-br.json" # it can also be an url
+    json: "assets/json/resume_en.json"
+  - data: resume_de
+    json: "assets/json/resume_de.json"
+  - data: resume_eo
+    json: "assets/json/resume_eo.json"
 jsonresume:
   - basics
   - work
