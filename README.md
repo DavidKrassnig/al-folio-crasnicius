@@ -11,9 +11,9 @@
 [![deploy](https://github.com/george-gca/multi-language-al-folio/actions/workflows/deploy.yml/badge.svg)](https://github.com/george-gca/multi-language-al-folio/actions/workflows/deploy.yml)
 [![Maintainers](https://img.shields.io/badge/maintainers-4-success.svg)](#maintainers)
 [![GitHub contributors](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://github.com/alshedivat/al-folio/graphs/contributors/)
-[![Docker Image Version](https://img.shields.io/docker/v/amirpourmand/al-folio?sort=semver&label=docker%20image&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
-[![Docker Image Size](https://img.shields.io/docker/image-size/amirpourmand/al-folio?sort=date&label=docker%20image%20size&color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
-[![Docker Pulls](https://img.shields.io/docker/pulls/amirpourmand/al-folio?color=blueviolet)](https://hub.docker.com/r/amirpourmand/al-folio)
+[![Docker Image Version](https://img.shields.io/docker/v/georgegca/multi-language-al-folio?sort=semver&label=docker%20image&color=blueviolet)](https://hub.docker.com/r/georgegca/multi-language-al-folio)
+[![Docker Image Size](https://img.shields.io/docker/image-size/georgegca/multi-language-al-folio?sort=date&label=docker%20image%20size&color=blueviolet)](https://hub.docker.com/r/georgegca/multi-language-al-folio)
+[![Docker Pulls](https://img.shields.io/docker/pulls/georgegca/multi-language-al-folio?color=blueviolet)](https://hub.docker.com/r/georgegca/multi-language-al-folio)
 
 [![GitHub release](https://img.shields.io/github/v/release/alshedivat/al-folio)](https://github.com/alshedivat/al-folio/releases/latest)
 [![GitHub license](https://img.shields.io/github/license/george-gca/multi-language-al-folio?color=blue)](https://github.com/george-gca/multi-language-al-folio/blob/master/LICENSE)
@@ -129,6 +129,8 @@ Feel free to add your own page(s) by sending a PR.
 <a href="https://astanziola.github.io" target="_blank">★</a>
 <a href="https://tinkerer.in" target="_blank">★</a>
 <a href="https://sam-bieberich.github.io/" target="_blank">★</a>
+<a href="https://afraniomelo.github.io/en/" target="_blank">★</a>
+<a href="https://jonaruthardt.github.io" target="_blank">★</a>
 </td>
 </tr>
 <tr>
@@ -213,10 +215,12 @@ Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.
       - [Social media previews](#social-media-previews)
       - [Atom (RSS-like) Feed](#atom-rss-like-feed)
       - [Related posts](#related-posts)
+      - [Code quality checks](#code-quality-checks)
   - [FAQ](#faq)
   - [Contributing](#contributing)
     - [Maintainers](#maintainers)
     - [All Contributors](#all-contributors)
+  - [Star History](#star-history)
   - [License](#license)
 
 ## Getting started
@@ -240,11 +244,15 @@ The default language will be the first in the list of languages in the [\_config
 ![Switch language](assets/img/readme_preview/multi-language-diff-1.png)
 ![Switch back language](assets/img/readme_preview/multi-language-diff-2.png)
 
+It is also possible to display the country flag instead of the language name.
+
+![Use country flag instead of language name](assets/img/readme_preview/country_flag.png)
+
 When using three or more, it will be created a dropdown menu with all the available languages.
 
 ![Switch language between 3 or more](assets/img/readme_preview/multi-language-3-or-more.png)
 
-Note that throughout the [README.md](README.md) and [CUSTOMIZE.md](CUSTOMIZE.md) files, the default language is English (LANG = en). You must have an equivalent file or path for each language you have defined in [\_config.yml](_config.yml). For example, if you have defined `languages: ["en", "pt-br"]`, you must have 2 versions of the file `_data/LANG/cv.yml`: [\_data/en/cv.yml](_data/en/cv.yml) and [\_data/pt-br/cv.yml](_data/pt-br/cv.yml).
+Note that throughout the [README.md](README.md) and [CUSTOMIZE.md](CUSTOMIZE.md) files, the default language is English (LANG = en). You must have an equivalent file or path for each language you have defined in [\_config.yml](_config.yml). For example, if you have defined `languages: ["en-us", "pt-br"]`, you must have 2 versions of the file `_data/LANG/cv.yml`: [\_data/en-us/cv.yml](_data/en-us/cv.yml) and [\_data/pt-br/cv.yml](_data/pt-br/cv.yml).
 
 ---
 
@@ -261,9 +269,9 @@ This template has a built-in light/dark mode. It detects the user preferred colo
 
 ### CV
 
-There are currently 2 different ways of generating the CV page content. The first one is by using a json file located in [assets/json/resume_LANG.json](assets/json/resume_en.json). It is a [known standard](https://jsonresume.org/) for creating a CV programmatically. The second one, currently used as a fallback when the json file is not found, is by using a yml file located in [\_data/LANG/cv.yml](_data/en/cv.yml). This was the original way of creating the CV page content and since it is more human readable than a json file we decided to keep it as an option.
+There are currently 2 different ways of generating the CV page content. The first one is by using a json file located in [assets/json/resume_LANG.json](assets/json/resume_en-us.json). It is a [known standard](https://jsonresume.org/) for creating a CV programmatically. The second one, currently used as a fallback when the json file is not found, is by using a yml file located in [\_data/LANG/cv.yml](_data/en-us/cv.yml). This was the original way of creating the CV page content and since it is more human readable than a json file we decided to keep it as an option.
 
-What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, it will load the contents of [\_data/LANG/cv.yml](_data/en/cv.yml) as fallback.
+What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, it will load the contents of [\_data/LANG/cv.yml](_data/en-us/cv.yml) as fallback.
 
 [![CV Preview](assets/img/readme_preview/cv.png)](https://george-gca.github.io/multi-language-al-folio/cv/)
 
@@ -311,7 +319,7 @@ For more details on how to create distill-styled posts using `<d-*>` tags, pleas
 
 #### Full support for math & code
 
-**al-folio** supports fast math typesetting through [MathJax](https://www.mathjax.org/) and code syntax highlighting using [GitHub style](https://github.com/jwarby/jekyll-pygments-themes). Also supports [mermaid diagrams](https://mermaid-js.github.io/mermaid/#/) and [TikZ figures](https://tikzjax.com/).
+**al-folio** supports fast math typesetting through [MathJax](https://www.mathjax.org/) and code syntax highlighting using [GitHub style](https://github.com/jwarby/jekyll-pygments-themes). Also supports [chartjs charts](https://www.chartjs.org/), [mermaid diagrams](https://mermaid-js.github.io/mermaid/#/), and [TikZ figures](https://tikzjax.com/).
 
 <p align="center">
 <a href="https://george-gca.github.io/multi-language-al-folio/blog/2015/math/" target="_blank"><img src="assets/img/readme_preview/math.png" width=400></a>
@@ -324,7 +332,7 @@ Photo formatting is made simple using [Bootstrap's grid system](https://getboots
 
 <p align="center">
   <a href="https://george-gca.github.io/multi-language-al-folio/projects/1_project/">
-    <img src="https://raw.githubusercontent.com/george-gca/multi-language-al-folio/master/assets/img/photos-screenshot.png" width="75%">
+    <img src="assets/img/readme_preview/photos-screenshot.png" width="75%">
   </a>
 </p>
 
@@ -346,7 +354,7 @@ You may also use the following codes for displaying this in any other pages.
 <!-- code for GitHub users -->
 {% if site.data.repositories.github_users %}
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %} {% include repository/repo_user.html username=user %} {% endfor %}
+  {% for user in site.data.repositories.github_users %} {% include repository/repo_user.liquid username=user %} {% endfor %}
 </div>
 {% endif %}
 
@@ -355,14 +363,14 @@ You may also use the following codes for displaying this in any other pages.
 <h4>{{ user }}</h4>
 {% endif %}
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.html username=user %}
+  {% include repository/repo_trophies.liquid username=user %}
 </div>
 {% endfor %} {% endif %}
 
 <!-- code for GitHub repositories -->
 {% if site.data.repositories.github_repos %}
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %} {% include repository/repo.html repository=repo %} {% endfor %}
+  {% for repo in site.data.repositories.github_repos %} {% include repository/repo.liquid repository=repo %} {% endfor %}
 </div>
 {% endif %}
 ```
@@ -393,6 +401,18 @@ It generates an Atom (RSS-like) feed of your posts, useful for Atom and RSS read
 
 By default, there will be a related posts section on the bottom of the blog posts. These are generated by selecting the `max_related` most recent posts that share at least `min_common_tags` tags with the current post. If you do not want to display related posts on a specific post, simply add `related_posts: false` to the front matter of the post. If you want to disable it for all posts, simply set `enabled` to false in the `related_blog_posts` section in [\_config.yml](_config.yml).
 
+---
+
+#### Code quality checks
+
+Currently, we run some checks to ensure that the code quality and generated site are good. The checks are done using GitHub Actions and the following tools:
+
+- [Prettier](https://prettier.io/) - check if the formatting of the code follows the style guide
+- [lychee](https://lychee.cli.rs/) - check for broken links
+- [Axe](https://github.com/dequelabs/axe-core) (need to run manually) - do some accessibility testing
+
+We decided to keep `Axe` runs manual because fixing the issues are not straightforward and might be hard for people without web development knowledge.
+
 ## FAQ
 
 For frequently asked questions, please refer to [FAQ.md](FAQ.md).
@@ -401,7 +421,7 @@ For frequently asked questions, please refer to [FAQ.md](FAQ.md).
 
 Contributions to multi-language-al-folio are very welcome! Before you get started, please take a look at [the guidelines](CONTRIBUTING.md).
 
-If you would like to improve documentation, add your webpage to the list below, or fix a minor inconsistency or bug, please feel free to send a PR directly to `master`. For more complex issues/bugs or feature requests, please open an issue using the appropriate template.
+If you would like to improve documentation or fix a minor inconsistency or bug, please feel free to send a PR directly to `master`. For more complex issues/bugs or feature requests, please open an issue using the appropriate template.
 
 ### Maintainers
 
@@ -430,6 +450,16 @@ Our most active contributors are welcome to join the maintainers team. If you ar
 
 <a href="https://contrib.rocks">
   <img src="https://contrib.rocks/image?repo=alshedivat/al-folio" />
+</a>
+
+## Star History
+
+<a href="https://star-history.com/#george-gca/multi-language-al-folio&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=george-gca/multi-language-al-folio&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=george-gca/multi-language-al-folio&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=george-gca/multi-language-al-folio&type=Date" />
+  </picture>
 </a>
 
 ## License

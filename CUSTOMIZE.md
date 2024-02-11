@@ -1,6 +1,6 @@
 # Customize
 
-Here we will give you some tips on how to customize the website. Note that throughout the [README.md](README.md) and [CUSTOMIZE.md](CUSTOMIZE.md) files, the default language is English (LANG = en). You must have an equivalent file or path for each language you have defined in [\_config.yml](_config.yml). For example, if you have defined `languages: ["en", "pt-br"]`, you must have 2 versions of the file `_data/LANG/cv.yml`: [\_data/en/cv.yml](_data/en/cv.yml) and [\_data/pt-br/cv.yml](_data/pt-br/cv.yml).
+Here we will give you some tips on how to customize the website. Note that throughout the [README.md](README.md) and [CUSTOMIZE.md](CUSTOMIZE.md) files, the default language is English (LANG = en-us). You must have an equivalent file or path for each language you have defined in [\_config.yml](_config.yml). For example, if you have defined `languages: ["en-us", "pt-br"]`, you must have 2 versions of the file `_data/LANG/cv.yml`: [\_data/en-us/cv.yml](_data/en-us/cv.yml) and [\_data/pt-br/cv.yml](_data/pt-br/cv.yml).
 
 ## Project structure
 
@@ -8,7 +8,6 @@ The project is structured as follows, focusing on the main components that you w
 
 ```txt
 .
-├── 📄 404.html: 404 page (page not found)
 ├── 📂 assets/: contains the assets that are displayed in the website
 │   └── 📂 json/
 │   │   └── 📄 resume_LANG.json: CV in JSON format (https://jsonresume.org/)
@@ -27,10 +26,11 @@ The project is structured as follows, focusing on the main components that you w
 │   │   ├── 📂 _projects/: contains the localized content of the projects
 │   └── 📄 LANG.yml: localized variables (placeholders). Must have one for each language defined in _config.yml
 ├── 📂 _includes/: contains code parts that are included in the main HTML file
+│   └── 📄 news.liquid: defines the news section layout in the about page
 ├── 📂 _layouts/: contains the layouts to choose from in the frontmatter of the Markdown files
 ├── 📂 _news/: the news that will appear in the news section in the about page
-├── 📄 news.html: defines the news section layout in the about page
-├── 📂 _pages/: contains the pages of the website that are shown in the header
+├── 📂 _pages/: contains the pages of the website
+|   └── 📄 404.md: 404 page (page not found)
 ├── 📂 _projects/: contains the projects
 └── 📂 _sass/: contains the SASS files that define the style of the website
     ├── 📄 _base.scss: base style of the website
@@ -49,11 +49,17 @@ The configuration file [\_config.yml](_config.yml) contains the main configurati
 
 All changes made to this file are only visible after you rebuild the website. That means that you need to run `bundle exec jekyll serve --lsi` again if you are running the website locally or push your changes to GitHub if you are using GitHub Pages. All other changes are visible immediately, you only need to refresh the page.
 
+## Displaying countries flags
+
+To display countries flags instead of the language initials in the header, you can set `country_flag: true` in the [\_config.yml](_config.yml) file. You should also add the countries' svg flags in the [assets/img/flags/](assets/img/flags/) directory. You can find the flags in the [flag-icons repository](https://github.com/lipis/flag-icons/tree/main/flags). When selecting the flags, the code uses the last part (after the `-`) of the site languages. So when looking for the flag of the language `pt-br`, the code will look for the file `br.svg` in the [assets/img/flags/](assets/img/flags/) directory.
+
+![Use country flag instead of language name](assets/img/readme_preview/country_flag.png)
+
 ## Modifying the CV information
 
-There are currently 2 different ways of generating the CV page content. The first one is by using a json file located in [assets/json/resume_LANG.json](assets/json/resume_en.json). It is a [known standard](https://jsonresume.org/) for creating a CV programmatically. The second one, currently used as a fallback when the json file is not found, is by using a yml file located in [\_data/LANG/cv.yml](_data/en/cv.yml). This was the original way of creating the CV page content and since it is more human readable than a json file we decided to keep it as an option.
+There are currently 2 different ways of generating the CV page content. The first one is by using a json file located in [assets/json/resume_LANG.json](assets/json/resume_en-us.json). It is a [known standard](https://jsonresume.org/) for creating a CV programmatically. The second one, currently used as a fallback when the json file is not found, is by using a yml file located in [\_data/LANG/cv.yml](_data/en-us/cv.yml). This was the original way of creating the CV page content and since it is more human readable than a json file we decided to keep it as an option.
 
-What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, it will load the contents of [\_data/LANG/cv.yml](_data/en/cv.yml). If you want to use the [\_data/LANG/cv.yml](_data/en/cv.yml) file as the source of your CV, you must delete the [assets/json/resume_LANG.json](assets/json/resume_en.json) file.
+What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, it will load the contents of [\_data/LANG/cv.yml](_data/en-us/cv.yml). If you want to use the [\_data/LANG/cv.yml](_data/en-us/cv.yml) file as the source of your CV, you must delete the [assets/json/resume_LANG.json](assets/json/resume_en-us.json) file.
 
 ## Modifying the user and repository information
 
@@ -65,7 +71,7 @@ You can create new pages by adding new Markdown files in the [\_pages](_pages/) 
 
 ## Creating new blog posts
 
-To create a new blog post, you can add a new Markdown file in the [\_i18n/LANG/\_posts](_i18n/en/_posts/) directory. The name of the file must follow the format `YYYY-MM-DD-title.md`. The easiest way to do this is to copy an existing blog post and modify it. Note that some blog posts have optional fields in the [frontmatter](https://jekyllrb.com/docs/front-matter/) that are used to enable specific behaviors or functions.
+To create a new blog post, you can add a new Markdown file in the [\_i18n/LANG/\_posts](_i18n/en-us/_posts/) directory. The [name of the file must follow](https://jekyllrb.com/docs/posts/#creating-posts) the format `YYYY-MM-DD-title.md`. The easiest way to do this is to copy an existing blog post and modify it. Note that some blog posts have optional fields in the [frontmatter](https://jekyllrb.com/docs/front-matter/) that are used to enable specific behaviors or functions.
 
 If you want to create blog posts that are not ready to be published, but you want to track it with git, you can create a [\_drafts](https://jekyllrb.com/docs/posts/#drafts) directory and store them there.
 
@@ -75,7 +81,7 @@ You can create new projects by adding new Markdown files in the [\_projects](_pr
 
 ## Adding some news
 
-You can add news in the about page by adding new Markdown files in the [\_i18n/LANG/\_news](_i18n/en/_news/) directory. There are currently two types of news: inline news and news with a link. News with a link take you to a new page while inline news are displayed directly in the about page. The easiest way to create yours is to copy an existing news and modify it.
+You can add news in the about page by adding new Markdown files in the [\_i18n/LANG/\_news](_i18n/en-us/_news/) directory. There are currently two types of news: inline news and news with a link. News with a link take you to a new page while inline news are displayed directly in the about page. The easiest way to create yours is to copy an existing news and modify it.
 
 ## Adding Collections
 
@@ -143,7 +149,7 @@ There are several custom bibtex keywords that you can use to affect how the entr
 - `supp`: Adds a "Supp" button to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
 - `website`: Adds a "Website" button redirecting to the specified link
 
-You can implement your own buttons by editing the [\_layouts/bib.html](_layouts/bib.html) file.
+You can implement your own buttons by editing the [\_layouts/bib.liquid](_layouts/bib.liquid) file.
 
 ## Changing theme color
 
