@@ -15,6 +15,10 @@ bibliography:
   supp: Supl
   video: Vídeo
   website: Site
+name:
+  personal_name: Eu
+  middle_name: R.
+  family_name: Nomo
 blog:
   navigation_title: blog
 categories:

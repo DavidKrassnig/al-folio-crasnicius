@@ -3,6 +3,10 @@ archive:
   category_suffix: dans cette catégorie
   tag_suffix: avec ce tag
   year_suffix: de cette année
+name:
+  personal_name: Votr
+  middle_name: E.
+  family_name: Nom
 bibliography:
   abstract: résumé
   awarded: prix

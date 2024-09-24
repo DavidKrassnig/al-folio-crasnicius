@@ -15,6 +15,10 @@ bibliography:
   supp: Supp
   video: Video
   website: Website
+name:
+  personal_name: You
+  middle_name: R.
+  family_name: Name
 blog:
   navigation_title: blog
 categories:
