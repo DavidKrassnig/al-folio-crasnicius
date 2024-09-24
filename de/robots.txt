@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://davidkrassnig.github.io/al-folio-crasnicius/de/sitemap.xml
